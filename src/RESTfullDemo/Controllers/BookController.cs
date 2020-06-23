@@ -42,7 +42,7 @@ namespace RESTfullDemo.Controllers
             {
                 return NotFound();
             }
-            var bookDto = Mapper.Map<BookDto>(Book);
+            var bookDto = Mapper.Map<BookDto>(targetBook);
             return bookDto;
         }
 
@@ -63,7 +63,7 @@ namespace RESTfullDemo.Controllers
         [HttpDelete("{bookId}")]
         public async Task<IActionResult> DeleteBook(Guid authorId, Guid bookId)
         {
-            var book = RepositoryWrapper.Book.GetBookAsync(authorId, bookId);
+            var book = await RepositoryWrapper.Book.GetBookAsync(authorId, bookId);
             if (book == null)
             {
                 return NotFound();
@@ -76,7 +76,7 @@ namespace RESTfullDemo.Controllers
         [HttpPut("{bookId}")]
         public async Task<IActionResult> UpdateBookAsync(Guid authorId, Guid bookId, BookForUpdateDto updatedBook)
         {
-            var book = RepositoryWrapper.Book.GetBookAsync(authorId, bookId);
+            var book = await RepositoryWrapper.Book.GetBookAsync(authorId, bookId);
             if (book == null)
             {
                 return NotFound();
@@ -94,7 +94,7 @@ namespace RESTfullDemo.Controllers
         [HttpPatch("{bookId}")]
         public async Task<IActionResult> PartiallyUpdateBookAsync(Guid authorId, Guid bookId, JsonPatchDocument<BookForUpdateDto> patchDocument)
         {
-            var book = RepositoryWrapper.Book.GetBookAsync(authorId, bookId);
+            var book = await RepositoryWrapper.Book.GetBookAsync(authorId, bookId);
             if (book == null)
             {
                 return NotFound();

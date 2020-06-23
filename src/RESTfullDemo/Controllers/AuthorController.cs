@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using RESTfullDemo.Entities;
+using RESTfullDemo.Helpers;
 using RESTfullDemo.Models;
 using RESTfullDemo.Services;
 using System;
@@ -22,12 +24,37 @@ namespace RESTfullDemo.Controllers
         public IRepositoryWrapper RepositoryWrapper { get; }
         public IMapper Mapper { get; }
 
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<AuthorDto>>> GetAuthorsAsync()
+        [HttpGet(Name = nameof(GetAuthorsAsync))]
+        public async Task<ActionResult<IEnumerable<AuthorDto>>> GetAuthorsAsync([FromQuery] AuthorResourceParameters parameters)
         {
-            var authors = (await RepositoryWrapper.Author.GetAllAsync())
-                .OrderBy(author => author.Name);
-            var authorDtoList = Mapper.Map<IEnumerable<AuthorDto>>(authors);
+            var pagedList = await RepositoryWrapper.Author.GetAllAsync(parameters);
+            var paginationMetadata = new
+            {
+                totalCount = pagedList.TotalCount,
+                pageSize = pagedList.PageSize,
+                currentPage = pagedList.CurrentPage,
+                totalPages = pagedList.TotalPages,
+                previousePageLink = pagedList.HasPrevious ? Url.Link(nameof(GetAuthorsAsync), new
+                {
+                    pageNumber = pagedList.CurrentPage - 1,
+                    pageSize = pagedList.PageSize,
+                    birthPlace = parameters.BirthPlace,
+                    searchQuery = parameters.SearchQuery,
+                    sortBy = parameters.SortBy
+                }) : null,
+                nextPageLink = pagedList.HasNext ? Url.Link(nameof(GetAuthorsAsync), new
+                {
+                    pageNumber = pagedList.CurrentPage + 1,
+                    pageSize = pagedList.PageSize,
+                    birthPlace = parameters.BirthPlace,
+                    searchQuery = parameters.SearchQuery,
+                    sortBy = parameters.SortBy
+                }) : null
+            };
+
+            Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(paginationMetadata));
+
+            var authorDtoList = Mapper.Map<IEnumerable<AuthorDto>>(pagedList);
             return authorDtoList.ToList();
 
         }
@@ -50,6 +77,7 @@ namespace RESTfullDemo.Controllers
         public async Task<IActionResult> CreateAuthorAsync(AuthorForCreationDto authorForCreationDto)
         {
             var author = Mapper.Map<Author>(authorForCreationDto);
+
             RepositoryWrapper.Author.Create(author);
             var result = await RepositoryWrapper.Author.SaveAsync();
             if (!result)
@@ -57,7 +85,9 @@ namespace RESTfullDemo.Controllers
                 throw new Exception("创建资源author失败");
             }
             var authorCreated = Mapper.Map<AuthorDto>(author);
-            return CreatedAtRoute(nameof(GetAuthorAsync), new { authorId = authorCreated.Id }, authorCreated);
+            return CreatedAtRoute(nameof(GetAuthorAsync),
+                new { authorId = authorCreated.Id },
+                authorCreated);
         }
 
         [HttpDelete("{authorId}")]

@@ -1,7 +1,7 @@
 ﻿using RESTfullDemo.Entities;
-using RESTfullDemo.Models;
+using RESTfullDemo.Helpers;
 using System;
-using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace RESTfullDemo.Services
 {
@@ -9,5 +9,6 @@ namespace RESTfullDemo.Services
         IRepositoryBase<Author>,
         IRepositoryBase2<Author, Guid>
     {
+        Task<PagedList<Author>> GetAllAsync(AuthorResourceParameters parameters);
     }
 }
