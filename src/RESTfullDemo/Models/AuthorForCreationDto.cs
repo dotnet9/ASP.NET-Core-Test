@@ -15,5 +15,8 @@ namespace RESTfullDemo.Models
         public int Age { get; set; }
         [EmailAddress(ErrorMessage = "邮箱格式不正确")]
         public string Email { get; set; }
+        [Required(ErrorMessage = "必须提供住址")]
+        [MaxLength(20, ErrorMessage = "住址的最大长度为20个字符")]
+        public string BirthPlace { get; set; }
     }
 }

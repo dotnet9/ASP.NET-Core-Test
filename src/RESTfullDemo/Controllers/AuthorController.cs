@@ -24,6 +24,12 @@ namespace RESTfullDemo.Controllers
         public IRepositoryWrapper RepositoryWrapper { get; }
         public IMapper Mapper { get; }
 
+        // GET: api/authors
+        /// <summary>
+        /// 获取所有作者信息
+        /// </summary>
+        /// <param name="parameters">分页查询参数</param>
+        /// <returns>作者信息数组</returns>
         [HttpGet(Name = nameof(GetAuthorsAsync))]
         public async Task<ActionResult<IEnumerable<AuthorDto>>> GetAuthorsAsync([FromQuery] AuthorResourceParameters parameters)
         {
@@ -59,6 +65,12 @@ namespace RESTfullDemo.Controllers
 
         }
 
+        // GET: api/authors/12a1e011-d33e-4ab2-be98-017c4cd46cac
+        /// <summary>
+        /// 根据作者ID查询作者基本信息
+        /// </summary>
+        /// <param name="authorId">作者ID</param>
+        /// <returns>作者基本信息</returns>
         [HttpGet("{authorId}", Name = nameof(GetAuthorAsync))]
         public async Task<ActionResult<AuthorDto>> GetAuthorAsync(Guid authorId)
         {
@@ -73,6 +85,12 @@ namespace RESTfullDemo.Controllers
             }
         }
 
+        // POST: api/authors
+        /// <summary>
+        /// 添加作者
+        /// </summary>
+        /// <param name="authorForCreationDto">作者基本信息</param>
+        /// <returns>添加后的作者基本信息</returns>
         [HttpPost]
         public async Task<IActionResult> CreateAuthorAsync(AuthorForCreationDto authorForCreationDto)
         {
@@ -90,6 +108,12 @@ namespace RESTfullDemo.Controllers
                 authorCreated);
         }
 
+        // DELETE: api/authors/12a1e011-d33e-4ab2-be98-017c4cd46cac
+        /// <summary>
+        /// 删除指定ID的作者
+        /// </summary>
+        /// <param name="authorId">作者ID</param>
+        /// <returns></returns>
         [HttpDelete("{authorId}")]
         public async Task<IActionResult> DeleteAuthorAsync(Guid authorId)
         {
