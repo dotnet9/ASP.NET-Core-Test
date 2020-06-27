@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RESTfullDemo</name>
+    </assembly>
+    <members>
+        <member name="M:RESTfullDemo.Controllers.AuthorController.GetAuthorsAsync(RESTfullDemo.Helpers.AuthorResourceParameters)">
+            <summary>
+            获取所有作者信息
+            </summary>
+            <param name="parameters">分页查询参数</param>
+            <returns>作者信息数组</returns>
+        </member>
+        <member name="M:RESTfullDemo.Controllers.AuthorController.GetAuthorAsync(System.Guid)">
+            <summary>
+            根据作者ID查询作者基本信息
+            </summary>
+            <param name="authorId">作者ID</param>
+            <returns>作者基本信息</returns>
+        </member>
+        <member name="M:RESTfullDemo.Controllers.AuthorController.CreateAuthorAsync(RESTfullDemo.Models.AuthorForCreationDto)">
+            <summary>
+            添加作者
+            </summary>
+            <param name="authorForCreationDto">作者基本信息</param>
+            <returns>添加后的作者基本信息</returns>
+        </member>
+        <member name="M:RESTfullDemo.Controllers.AuthorController.DeleteAuthorAsync(System.Guid)">
+            <summary>
+            删除指定ID的作者
+            </summary>
+            <param name="authorId">作者ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:RESTfullDemo.Controllers.BookController.GetBooksAsync(System.Guid)">
+            <summary>
+            获取指定Id的作者所有书籍信息
+            </summary>
+            <param name="authorId">作者ID</param>
+            <returns>数据列表</returns>
+        </member>
+        <member name="M:RESTfullDemo.Controllers.BookController.GetBook(System.Guid,System.Guid)">
+            <summary>
+            获取指定作者ID的指定书籍Id信息
+            </summary>
+            <param name="authorId">作者ID</param>
+            <param name="bookId">书籍ID</param>
+            <returns>书籍基本信息</returns>
+        </member>
+        <member name="M:RESTfullDemo.Controllers.BookController.AddBookAsync(System.Guid,RESTfullDemo.Models.BookForCreationDto)">
+            <summary>
+            创建书籍
+            </summary>
+            <param name="authorId">作者ID</param>
+            <param name="bookForCreationDto">书籍基本信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:RESTfullDemo.Controllers.BookController.DeleteBook(System.Guid,System.Guid)">
+            <summary>
+            删除指定作者Id的指定书籍ID信息
+            </summary>
+            <param name="authorId">作者ID</param>
+            <param name="bookId">书籍ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:RESTfullDemo.Controllers.BookController.UpdateBookAsync(System.Guid,System.Guid,RESTfullDemo.Models.BookForUpdateDto)">
+            <summary>
+            更新书籍
+            </summary>
+            <param name="authorId">作者ID</param>
+            <param name="bookId">书籍ID</param>
+            <param name="updatedBook">需要更新的书籍信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:RESTfullDemo.Controllers.BookController.PartiallyUpdateBookAsync(System.Guid,System.Guid,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{RESTfullDemo.Models.BookForUpdateDto})">
+            <summary>
+            更新部分书籍信息
+            </summary>
+            <param name="authorId">作者ID</param>
+            <param name="bookId">书籍ID</param>
+            <param name="patchDocument">需要更新的书籍部分信息</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

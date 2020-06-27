@@ -1,8 +1,11 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Net.Http.Headers;
 using RESTfullDemo.Entities;
 using RESTfullDemo.Filters;
+using RESTfullDemo.Helpers;
 using RESTfullDemo.Models;
 using RESTfullDemo.Services;
 using System;
@@ -33,7 +36,7 @@ namespace RESTfullDemo.Controllers
         /// </summary>
         /// <param name="authorId">作者ID</param>
         /// <returns>数据列表</returns>
-        [HttpGet]
+        [HttpGet(Name =nameof(GetBooksAsync))]
         public async Task<ActionResult<IEnumerable<BookDto>>> GetBooksAsync(Guid authorId)
         {
             var books = await RepositoryWrapper.Book.GetBooksAsync(authorId);
@@ -116,6 +119,7 @@ namespace RESTfullDemo.Controllers
         /// <param name="updatedBook">需要更新的书籍信息</param>
         /// <returns></returns>
         [HttpPut("{bookId}")]
+        [CheckIfMatchHeaderFilter]
         public async Task<IActionResult> UpdateBookAsync(Guid authorId, Guid bookId, BookForUpdateDto updatedBook)
         {
             var book = await RepositoryWrapper.Book.GetBookAsync(authorId, bookId);
@@ -123,12 +127,23 @@ namespace RESTfullDemo.Controllers
             {
                 return NotFound();
             }
+
+            //var entityHash = HashFactory.GetHash(book);
+            //if(Request.Headers.TryGetValue(HeaderNames.IfMatch, out var requestETag)
+            //    &&requestETag!=entityHash)
+            //{
+            //    return StatusCode(StatusCodes.Status412PreconditionFailed);
+            //}
+
             Mapper.Map(updatedBook, book, typeof(BookForUpdateDto), typeof(Book));
             RepositoryWrapper.Book.Update(book);
             if (!await RepositoryWrapper.Book.SaveAsync())
             {
                 throw new Exception("更新资源Book失败");
             }
+
+            //var entityNewHash = HashFactory.GetHash(book);
+            //Response.Headers[HeaderNames.ETag] = entityNewHash;
 
             return NoContent();
         }
@@ -149,6 +164,14 @@ namespace RESTfullDemo.Controllers
             {
                 return NotFound();
             }
+
+            //var entityHash = HashFactory.GetHash(book);
+            //if (Request.Headers.TryGetValue(HeaderNames.IfMatch, out var requestETag)
+            //    && requestETag != entityHash)
+            //{
+            //    return StatusCode(StatusCodes.Status412PreconditionFailed);
+            //}
+
             var bookUpdateDto = Mapper.Map<BookForUpdateDto>(book);
             patchDocument.ApplyTo(bookUpdateDto);
             if (!ModelState.IsValid)
@@ -161,6 +184,9 @@ namespace RESTfullDemo.Controllers
             {
                 throw new Exception("更新资源Book失败");
             }
+
+            //var entityNewHash = HashFactory.GetHash(book);
+            //Response.Headers[HeaderNames.ETag] = entityNewHash;
 
             return NoContent();
         }
