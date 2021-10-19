@@ -1,0 +1,40 @@
+﻿<Properties StartupConfiguration="{406EAD93-99B0-4420-9AEB-934FFD3DB867}|Default">
+  <MonoDevelop.Ide.ItemProperties.Repository.Blog.IRepository FirstBuild="True" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Blog.Repositoty/Class1.cs">
+    <Files>
+      <File FileName="Blog.Model/BlogContext.cs" Line="13" Column="10" />
+      <File FileName="Blog.Model/BaseID.cs" Line="17" Column="35" />
+      <File FileName="Blog.Model/UserInfo.cs" Line="22" Column="33" />
+      <File FileName="Blog.Model/CategoryInfo.cs" Line="15" Column="31" />
+      <File FileName="Blog.Model/PostInfo.cs" Line="14" Column="56" />
+      <File FileName="Blog.IRepository/Class1.cs" Line="1" Column="1" />
+      <File FileName="Blog.Repositoty/Class1.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Blog.WebApi" expanded="True">
+            <Node name="Blog.IRepository" expanded="True" />
+            <Node name="Blog.Model" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="Blog.Repositoty" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Blog.WebApi PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Repository.Blog.Repositoty FirstBuild="True" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

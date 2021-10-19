@@ -1,0 +1,13 @@
+/Users/lsq/Documents/GitHub/dotnet/ASP.NET-Core-Test/src/Blog.WebApi/Repository/Blog.Repositoty/bin/Debug/net6.0/Blog.Repositoty.deps.json
+/Users/lsq/Documents/GitHub/dotnet/ASP.NET-Core-Test/src/Blog.WebApi/Repository/Blog.Repositoty/bin/Debug/net6.0/Blog.Repositoty.dll
+/Users/lsq/Documents/GitHub/dotnet/ASP.NET-Core-Test/src/Blog.WebApi/Repository/Blog.Repositoty/bin/Debug/net6.0/ref/Blog.Repositoty.dll
+/Users/lsq/Documents/GitHub/dotnet/ASP.NET-Core-Test/src/Blog.WebApi/Repository/Blog.Repositoty/bin/Debug/net6.0/Blog.Repositoty.pdb
+/Users/lsq/Documents/GitHub/dotnet/ASP.NET-Core-Test/src/Blog.WebApi/Repository/Blog.Repositoty/obj/Debug/net6.0/Blog.Repositoty.GlobalUsings.g.cs
+/Users/lsq/Documents/GitHub/dotnet/ASP.NET-Core-Test/src/Blog.WebApi/Repository/Blog.Repositoty/obj/Debug/net6.0/Blog.Repositoty.csproj.AssemblyReference.cache
+/Users/lsq/Documents/GitHub/dotnet/ASP.NET-Core-Test/src/Blog.WebApi/Repository/Blog.Repositoty/obj/Debug/net6.0/Blog.Repositoty.GeneratedMSBuildEditorConfig.editorconfig
+/Users/lsq/Documents/GitHub/dotnet/ASP.NET-Core-Test/src/Blog.WebApi/Repository/Blog.Repositoty/obj/Debug/net6.0/Blog.Repositoty.AssemblyInfoInputs.cache
+/Users/lsq/Documents/GitHub/dotnet/ASP.NET-Core-Test/src/Blog.WebApi/Repository/Blog.Repositoty/obj/Debug/net6.0/Blog.Repositoty.AssemblyInfo.cs
+/Users/lsq/Documents/GitHub/dotnet/ASP.NET-Core-Test/src/Blog.WebApi/Repository/Blog.Repositoty/obj/Debug/net6.0/Blog.Repositoty.csproj.CoreCompileInputs.cache
+/Users/lsq/Documents/GitHub/dotnet/ASP.NET-Core-Test/src/Blog.WebApi/Repository/Blog.Repositoty/obj/Debug/net6.0/Blog.Repositoty.dll
+/Users/lsq/Documents/GitHub/dotnet/ASP.NET-Core-Test/src/Blog.WebApi/Repository/Blog.Repositoty/obj/Debug/net6.0/ref/Blog.Repositoty.dll
+/Users/lsq/Documents/GitHub/dotnet/ASP.NET-Core-Test/src/Blog.WebApi/Repository/Blog.Repositoty/obj/Debug/net6.0/Blog.Repositoty.pdb

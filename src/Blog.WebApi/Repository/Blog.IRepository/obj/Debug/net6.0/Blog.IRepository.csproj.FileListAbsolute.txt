@@ -1,0 +1,16 @@
+/Users/lsq/Documents/GitHub/dotnet/ASP.NET-Core-Test/src/Blog.WebApi/Repository/Blog.IRepository/bin/Debug/net6.0/Blog.IRepository.deps.json
+/Users/lsq/Documents/GitHub/dotnet/ASP.NET-Core-Test/src/Blog.WebApi/Repository/Blog.IRepository/bin/Debug/net6.0/Blog.IRepository.dll
+/Users/lsq/Documents/GitHub/dotnet/ASP.NET-Core-Test/src/Blog.WebApi/Repository/Blog.IRepository/bin/Debug/net6.0/ref/Blog.IRepository.dll
+/Users/lsq/Documents/GitHub/dotnet/ASP.NET-Core-Test/src/Blog.WebApi/Repository/Blog.IRepository/bin/Debug/net6.0/Blog.IRepository.pdb
+/Users/lsq/Documents/GitHub/dotnet/ASP.NET-Core-Test/src/Blog.WebApi/Repository/Blog.IRepository/obj/Debug/net6.0/Blog.IRepository.GlobalUsings.g.cs
+/Users/lsq/Documents/GitHub/dotnet/ASP.NET-Core-Test/src/Blog.WebApi/Repository/Blog.IRepository/obj/Debug/net6.0/Blog.IRepository.csproj.AssemblyReference.cache
+/Users/lsq/Documents/GitHub/dotnet/ASP.NET-Core-Test/src/Blog.WebApi/Repository/Blog.IRepository/obj/Debug/net6.0/Blog.IRepository.GeneratedMSBuildEditorConfig.editorconfig
+/Users/lsq/Documents/GitHub/dotnet/ASP.NET-Core-Test/src/Blog.WebApi/Repository/Blog.IRepository/obj/Debug/net6.0/Blog.IRepository.AssemblyInfoInputs.cache
+/Users/lsq/Documents/GitHub/dotnet/ASP.NET-Core-Test/src/Blog.WebApi/Repository/Blog.IRepository/obj/Debug/net6.0/Blog.IRepository.AssemblyInfo.cs
+/Users/lsq/Documents/GitHub/dotnet/ASP.NET-Core-Test/src/Blog.WebApi/Repository/Blog.IRepository/obj/Debug/net6.0/Blog.IRepository.csproj.CoreCompileInputs.cache
+/Users/lsq/Documents/GitHub/dotnet/ASP.NET-Core-Test/src/Blog.WebApi/Repository/Blog.IRepository/obj/Debug/net6.0/Blog.IRepository.dll
+/Users/lsq/Documents/GitHub/dotnet/ASP.NET-Core-Test/src/Blog.WebApi/Repository/Blog.IRepository/obj/Debug/net6.0/ref/Blog.IRepository.dll
+/Users/lsq/Documents/GitHub/dotnet/ASP.NET-Core-Test/src/Blog.WebApi/Repository/Blog.IRepository/obj/Debug/net6.0/Blog.IRepository.pdb
+/Users/lsq/Documents/GitHub/dotnet/ASP.NET-Core-Test/src/Blog.WebApi/Repository/Blog.IRepository/bin/Debug/net6.0/Blog.Model.dll
+/Users/lsq/Documents/GitHub/dotnet/ASP.NET-Core-Test/src/Blog.WebApi/Repository/Blog.IRepository/bin/Debug/net6.0/Blog.Model.pdb
+/Users/lsq/Documents/GitHub/dotnet/ASP.NET-Core-Test/src/Blog.WebApi/Repository/Blog.IRepository/obj/Debug/net6.0/Blog.IRepository.csproj.CopyComplete

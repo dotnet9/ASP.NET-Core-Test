@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "iuDfVLW9glBR/xt9Eh9tNi9j9yRpl+rCCHu2AU7GwTywqfbvC0aXzA2YorhxcNxzzAJCwrXL6apJjrsKojodXg==",
+  "success": true,
+  "projectFilePath": "/Users/lsq/Documents/GitHub/dotnet/ASP.NET-Core-Test/src/Blog.WebApi/Blog.WebApi/Blog.WebApi.csproj",
+  "expectedPackageFiles": [
+    "/Users/lsq/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/Users/lsq/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/lsq/.nuget/packages/swashbuckle.aspnetcore/6.2.3/swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "/Users/lsq/.nuget/packages/swashbuckle.aspnetcore.swagger/6.2.3/swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "/Users/lsq/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.2.3/swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "/Users/lsq/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
