@@ -31,6 +31,7 @@
     "Permission:Books": "书籍管理",
     "Permission:Books.Create": "添加新书",
     "Permission:Books.Edit": "编辑书",
-    "Permission:Books.Delete": "删除书"
+    "Permission:Books.Delete": "删除书",
+    "BookStore:00001": "已经存在相同名字的作者: {name}"
   }
 }
