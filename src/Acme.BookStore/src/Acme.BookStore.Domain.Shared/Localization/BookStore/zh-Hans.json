@@ -36,6 +36,11 @@
     "Permission:Authors": "作者管理",
     "Permission:Authors.Create": "添加新作者",
     "Permission:Authors.Edit": "编辑作者",
-    "Permission:Authors.Delete": "删除作者"
+    "Permission:Authors.Delete": "删除作者",
+    "Menu:Authors": "作者",
+    "Authors": "作者",
+    "AuthorDeletionConfirmationMessage": "是否确认删除作者 '{0}'?",
+    "BirthDate": "出生日期",
+    "NewAuthor": "新增作者"
   }
 }

@@ -1,9 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Acme.BookStore.Localization;
-using Acme.BookStore.MultiTenancy;
-using Volo.Abp.Identity.Blazor;
-using Volo.Abp.SettingManagement.Blazor.Menus;
-using Volo.Abp.TenantManagement.Blazor.Navigation;
+using Acme.BookStore.Permissions;
 using Volo.Abp.UI.Navigation;
 
 namespace Acme.BookStore.Blazor.Menus;
@@ -18,9 +15,8 @@ public class BookStoreMenuContributor : IMenuContributor
 		}
 	}
 
-	private Task ConfigureMainMenuAsync(MenuConfigurationContext context)
+	private async Task ConfigureMainMenuAsync(MenuConfigurationContext context)
 	{
-		var administration = context.Menu.GetAdministration();
 		var l = context.GetLocalizer<BookStoreResource>();
 
 		context.Menu.Items.Insert(
@@ -29,37 +25,35 @@ public class BookStoreMenuContributor : IMenuContributor
 				BookStoreMenus.Home,
 				l["Menu:Home"],
 				"/",
-				"fas fa-home",
-				0
+				"fas fa-home"
 			)
 		);
 
-		if (MultiTenancyConsts.IsEnabled)
-		{
-			administration.SetSubItemOrder(TenantManagementMenuNames.GroupName, 1);
-		}
-		else
-		{
-			administration.TryRemoveMenuItem(TenantManagementMenuNames.GroupName);
-		}
-
-		administration.SetSubItemOrder(IdentityMenuNames.GroupName, 2);
-		administration.SetSubItemOrder(SettingManagementMenus.GroupName, 3);
-
-		context.Menu.AddItem(
-			new ApplicationMenuItem(
-				"BooksStore",
-				l["Menu:BookStore"],
-				icon: "fa fa-book"
-			).AddItem(
-				new ApplicationMenuItem(
-					"BooksStore.Books",
-					l["Menu:Books"],
-					"/books"
-				)
-			)
+		var bookStoreMenu = new ApplicationMenuItem(
+			"BooksStore",
+			l["Menu:BookStore"],
+			icon: "fa fa-book"
 		);
 
-		return Task.CompletedTask;
+		context.Menu.AddItem(bookStoreMenu);
+
+		if (await context.IsGrantedAsync(BookStorePermissions.Books.Default))
+		{
+			bookStoreMenu.AddItem(new ApplicationMenuItem(
+				"BooksStore.Books",
+				l["Menu:Books"],
+				"/books"
+			));
+		}
+
+		if (await context.IsGrantedAsync(BookStorePermissions.Authors.Default))
+		{
+			bookStoreMenu.AddItem(new ApplicationMenuItem
+			(
+				"BooksStore.Authors",
+				l["Menu:Authors"],
+				"/authors"
+			));
+		}
 	}
 }
