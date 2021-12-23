@@ -41,6 +41,7 @@
     "Authors": "作者",
     "AuthorDeletionConfirmationMessage": "是否确认删除作者 '{0}'?",
     "BirthDate": "出生日期",
-    "NewAuthor": "新增作者"
+    "NewAuthor": "新增作者",
+    "PickAnAuthor": "选择作者"
   }
 }

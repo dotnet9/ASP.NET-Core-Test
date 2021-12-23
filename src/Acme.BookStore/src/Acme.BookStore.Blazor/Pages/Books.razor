@@ -5,6 +5,7 @@
 @using Microsoft.Extensions.Localization
 @using Volo.Abp.AspNetCore.Components.Web
 @using Acme.BookStore.Books
+@using Acme.BookStore.Permissions
 @inherits AbpCrudPageBase<Acme.BookStore.Books.IBookAppService, Acme.BookStore.Books.BookDto, Guid, Volo.Abp.Application.Dtos.PagedAndSortedResultRequestDto, Acme.BookStore.Books.CreateUpdateBookDto>
 
 <Card>
@@ -48,6 +49,10 @@
                                 Caption="@L["Name"]">
                 </DataGridColumn>
                 <DataGridColumn TItem="BookDto"
+                                Field="@nameof(BookDto.AuthorName)"
+                                Caption="@L["Author"]">
+                </DataGridColumn>
+                <DataGridColumn TItem="BookDto"
                                 Field="@nameof(BookDto.Type)"
                                 Caption="@L["Type"]">
                     <DisplayTemplate>
@@ -87,6 +92,18 @@
             </ModalHeader>
             <ModalBody>
                 <Validations @ref="@CreateValidationsRef" Model="@NewEntity" ValidateOnLoad="false">
+                    <Field>
+                        <FieldLabel>@L["Author"]</FieldLabel>
+                        <Select TValue="Guid" @bind-SelectedValue="@NewEntity.AuthorId">
+                            <SelectItem TValue="Guid" Value="Guid.Empty">@L["PickAnAuthor"]</SelectItem>
+                            @foreach (var author in _authorList)
+                            {
+                                <SelectItem TValue="Guid" Value="@author.Id">
+                                    @author.Name
+                                </SelectItem>
+                            }
+                        </Select>
+                    </Field>
                     <Validation MessageLocalizer="@LH.Localize">
                         <Field>
                             <FieldLabel>@L["Name"]</FieldLabel>
@@ -144,6 +161,17 @@
             </ModalHeader>
             <ModalBody>
                 <Validations @ref="@EditValidationsRef" Model="@NewEntity" ValidateOnLoad="false">
+                    <Field>
+                        <FieldLabel>@L["Author"]</FieldLabel>
+                        <Select TValue="Guid" @bind-SelectedValue="@EditingEntity.AuthorId">
+                            @foreach (var author in _authorList)
+                            {
+                                <SelectItem TValue="Guid" Value="@author.Id">
+                                    @author.Name
+                                </SelectItem>
+                            }
+                        </Select>
+                    </Field>
                     <Validation MessageLocalizer="@LH.Localize">
                         <Field>
                             <FieldLabel>@L["Name"]</FieldLabel>
@@ -190,3 +218,21 @@
         </Form>
     </ModalContent>
 </Modal>
+
+@code
+{
+    IReadOnlyList<AuthorLookupDto> _authorList = Array.Empty<AuthorLookupDto>();
+
+    public Books()
+    {
+        CreatePolicyName = BookStorePermissions.Books.Create;
+        UpdatePolicyName = BookStorePermissions.Books.Edit;
+        DeletePolicyName = BookStorePermissions.Books.Delete;
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        _authorList = (await AppService.GetAuthorLookupAsync()).Items;
+    }
+}
