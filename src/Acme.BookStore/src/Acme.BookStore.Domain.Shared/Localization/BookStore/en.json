@@ -3,8 +3,7 @@
   "texts": {
     "Menu:Home": "Home",
     "Welcome": "Welcome",
-    "LongWelcomeMessage":
-      "Welcome to the application. This is a startup project based on the ABP framework. For more information, visit abp.io.",
+    "LongWelcomeMessage": "Welcome to the application. This is a startup project based on the ABP framework. For more information, visit abp.io.",
     "Menu:BookStore": "Book Store",
     "Menu:Books": "Books",
     "Actions": "Actions",
@@ -33,6 +32,10 @@
     "Permission:Books.Create": "Creating new books",
     "Permission:Books.Edit": "Editing the books",
     "Permission:Books.Delete": "Deleting the books",
-    "BookStore:00001": "There is already an author with the same name: {name}"
+    "BookStore:00001": "There is already an author with the same name: {name}",
+    "Permission:Authors": "Author Management",
+    "Permission:Authors.Create": "Creating new authors",
+    "Permission:Authors.Edit": "Editing the authors",
+    "Permission:Authors.Delete": "Deleting the authors"
   }
 }
