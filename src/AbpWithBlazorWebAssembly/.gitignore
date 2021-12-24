@@ -251,12 +251,12 @@ paket-files/
 .idea/
 *.sln.iml
 
-# TodoApp
-src/TodoApp.Web/Logs/*
-src/TodoApp.Web.Host/Logs/*
-src/TodoApp.IdentityServer/Logs/*
-src/TodoApp.HttpApi.Host/Logs/*
-src/TodoApp.HttpApi.Host/Logs/*
-src/TodoApp.DbMigrator/Logs/*
-src/TodoApp.Blazor.Server/Logs/*
-src/TodoApp.Blazor.Server.Tiered/Logs/*
+# BookStore
+src/Acme.BookStore.Web/Logs/*
+src/Acme.BookStore.Web.Host/Logs/*
+src/Acme.BookStore.IdentityServer/Logs/*
+src/Acme.BookStore.HttpApi.Host/Logs/*
+src/Acme.BookStore.HttpApi.Host/Logs/*
+src/Acme.BookStore.DbMigrator/Logs/*
+src/Acme.BookStore.Blazor.Server/Logs/*
+src/Acme.BookStore.Blazor.Server.Tiered/Logs/*
