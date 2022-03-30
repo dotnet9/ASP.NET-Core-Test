@@ -34,3 +34,5 @@ src/RESTfullDemo/.vs/
 src/RESTfullDemo/bin/
 src/RESTfullDemo/obj/
 src/RESTfullDemo/Migrations/
+src/TestMarkdown/bin/
+src/TestMarkdown/obj/
