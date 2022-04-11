@@ -1,7 +1,8 @@
-﻿<Router AppAssembly="@typeof(App).Assembly">
+﻿@using System.Reflection
+<Router AppAssembly="@typeof(App).Assembly" AdditionalAssemblies="@assemblies">
     <Found Context="routeData">
-        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
-        <FocusOnNavigate RouteData="@routeData" Selector="h1" />
+        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)"/>
+        <FocusOnNavigate RouteData="@routeData" Selector="h1"/>
     </Found>
     <NotFound>
         <PageTitle>Not found</PageTitle>
@@ -10,3 +11,12 @@
         </LayoutView>
     </NotFound>
 </Router>
+
+@code
+{
+    Assembly[] assemblies = new[]
+    {
+        Assembly.LoadFile(AppDomain.CurrentDomain.BaseDirectory + "Plugin1.dll"),
+        Assembly.LoadFile(AppDomain.CurrentDomain.BaseDirectory + "Plugin2.dll")
+    };
+}
