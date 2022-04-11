@@ -36,3 +36,13 @@ src/RESTfullDemo/obj/
 src/RESTfullDemo/Migrations/
 src/TestMarkdown/bin/
 src/TestMarkdown/obj/
+src/BlazorPluginTest/.vs/
+src/BlazorPluginTest/_ReSharper.Caches/
+src/BlazorPluginTest/BlazorPluginTest/.vs/
+src/BlazorPluginTest/BlazorPluginTest/_ReSharper.Caches/
+src/BlazorPluginTest/BlazorPluginTest/bin/
+src/BlazorPluginTest/BlazorPluginTest/obj/
+src/BlazorPluginTest/Plugins/Plugin1/bin/
+src/BlazorPluginTest/Plugins/Plugin1/obj/
+src/BlazorPluginTest/Plugins/Plugin2/bin/
+src/BlazorPluginTest/Plugins/Plugin2/obj/

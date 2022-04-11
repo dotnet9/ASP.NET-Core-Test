@@ -1,0 +1,37 @@
+﻿@page "/"
+@using System.Reflection
+
+<PageTitle>测试动态加载插件视图</PageTitle>
+
+@if (_pluginType != null)
+{
+    <DynamicComponent Type="@_pluginType"></DynamicComponent>
+}
+
+<button @onclick="LoadPlugin1">加载插件1</button>
+<button @onclick="LoadPlugin2">加载插件2</button>
+
+@code
+{
+    private Type? _pluginType;
+    private Assembly? _asseblyPlugin1;
+    private Assembly? _asseblyPlugin2;
+
+    private void LoadPlugin1()
+    {
+        if (_asseblyPlugin1 == null)
+        {
+            _asseblyPlugin1 = Assembly.LoadFile(AppDomain.CurrentDomain.BaseDirectory + "Plugin1.dll");
+        }
+        _pluginType = _asseblyPlugin1.GetType("Plugin1.Component1");
+    }
+
+    private void LoadPlugin2()
+    {
+        if (_asseblyPlugin2 == null)
+        {
+            _asseblyPlugin2 = Assembly.LoadFile(AppDomain.CurrentDomain.BaseDirectory + "Plugin2.dll");
+        }
+        _pluginType = _asseblyPlugin2.GetType("Plugin2.Component1");
+    }
+}
