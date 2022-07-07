@@ -46,3 +46,6 @@ src/BlazorPluginTest/Plugins/Plugin1/bin/
 src/BlazorPluginTest/Plugins/Plugin1/obj/
 src/BlazorPluginTest/Plugins/Plugin2/bin/
 src/BlazorPluginTest/Plugins/Plugin2/obj/
+src/RESTfullDemo/_ReSharper.Caches/
+src/TestWebAPI/obj/
+src/TestWebAPI/bin/
