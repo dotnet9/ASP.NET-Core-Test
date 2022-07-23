@@ -49,3 +49,15 @@ src/BlazorPluginTest/Plugins/Plugin2/obj/
 src/RESTfullDemo/_ReSharper.Caches/
 src/TestWebAPI/obj/
 src/TestWebAPI/bin/
+src/BlazorApp1/.vs/
+src/BlazorApp1/_ReSharper.Caches/
+src/BlazorApp1/BlazorApp1/Client/bin/
+src/BlazorApp1/BlazorApp1/Client/obj/
+src/BlazorApp1/BlazorApp1/Server/bin/
+src/BlazorApp1/BlazorApp1/Server/obj/
+src/BlazorApp1/BlazorApp1/Shared/bin/
+src/BlazorApp1/BlazorApp1/Shared/obj/
+src/FileUploadAndDownload/.vs/
+src/FileUploadAndDownload/_ReSharper.Caches/
+src/FileUploadAndDownload/FileUploadAndDownload/bin/
+src/FileUploadAndDownload/FileUploadAndDownload/obj/

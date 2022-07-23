@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\iSlide\Documents\GitHub\ASP.NET-Core-Test\src\BlazorApp1\BlazorApp1\Client\bin\Release\net6.0\browser-wasm\publish\</_PublishTargetUrl>
+    <History>True|2022-07-14T09:46:56.7624615Z;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>
