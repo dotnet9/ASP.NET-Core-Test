@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Masa.Contrib.Service.Caller.HttpClient" Version="0.6.0" />
+  </ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\..\Contracts\MasaFrameworkDemo.Contracts.Order\MasaFrameworkDemo.Contracts.Order.csproj" />
+	</ItemGroup>
+</Project>

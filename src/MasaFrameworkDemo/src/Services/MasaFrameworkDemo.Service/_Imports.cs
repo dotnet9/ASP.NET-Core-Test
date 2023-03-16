@@ -1,0 +1,10 @@
+﻿global using FluentValidation.AspNetCore;
+global using FluentValidation;
+global using Microsoft.AspNetCore.Mvc;
+global using Masa.BuildingBlocks.Dispatcher.Events;
+global using Masa.Contrib.Dispatcher.Events;
+global using Microsoft.EntityFrameworkCore;
+global using MasaFrameworkDemo.Service.Infrastructure.Entities;
+global using MasaFrameworkDemo.Service.Infrastructure.Events;
+global using MasaFrameworkDemo.Service.Infrastructure.Middleware;
+global using MasaFrameworkDemo.Service.Infrastructure.Repositories;

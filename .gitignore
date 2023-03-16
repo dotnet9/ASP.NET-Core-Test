@@ -71,3 +71,11 @@ src/RazorPagesMovie/obj/
 src/TestReturnDetailDto/.vs/
 src/TestReturnDetailDto/bin/
 src/TestReturnDetailDto/obj/
+src/MasaFrameworkDemo/src/ApiGateways/Caller/MasaFrameworkDemo.Caller/bin/
+src/MasaFrameworkDemo/src/ApiGateways/Caller/MasaFrameworkDemo.Caller/obj/
+src/MasaFrameworkDemo/src/Contracts/MasaFrameworkDemo.Contracts.Order/obj/
+src/MasaFrameworkDemo/src/Services/MasaFrameworkDemo.Service/bin/
+src/MasaFrameworkDemo/src/Services/MasaFrameworkDemo.Service/obj/
+src/MasaFrameworkDemo/src/Contracts/MasaFrameworkDemo.Contracts.Order/bin/
+src/MasaFrameworkDemo/src/Web/MasaFrameworkDemo.Admin/bin/
+src/MasaFrameworkDemo/src/Web/MasaFrameworkDemo.Admin/obj/
