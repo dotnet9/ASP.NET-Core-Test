@@ -68,3 +68,6 @@ src/IdentityDemo/obj/
 src/RazorPagesMovie/.vs/
 src/RazorPagesMovie/bin/
 src/RazorPagesMovie/obj/
+src/TestReturnDetailDto/.vs/
+src/TestReturnDetailDto/bin/
+src/TestReturnDetailDto/obj/
