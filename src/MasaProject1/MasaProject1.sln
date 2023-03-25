@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31521.260
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{92F40AFA-8416-40BE-9893-D35E1924C69D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{4A1D2DFA-D091-4CD2-B9CB-D7AAA795ABD9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dapr", "dapr", "{E011B243-0389-468B-B903-83445BED69A4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "components", "components", "{FBFB499A-7022-4417-881B-68F63DBDB7F4}"
+	ProjectSection(SolutionItems) = preProject
+		dapr\components\pubsub.yaml = dapr\components\pubsub.yaml
+		dapr\components\statestore.yaml = dapr\components\statestore.yaml
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MasaProject1.Service.Order", "src\Services\MasaProject1.Service\MasaProject1.Service.Order.csproj", "{656FCCA5-0C58-43AC-BFA4-168C445B8ADF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Contracts", "Contracts", "{88AD0A79-5286-4C1C-8A58-AAC9E6870CCD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MasaProject1.Contracts.Order", "src\Contracts\MasaProject1.Contracts.Order\MasaProject1.Contracts.Order.csproj", "{D5D5DA4F-5644-485C-A529-B245ED20A542}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{656FCCA5-0C58-43AC-BFA4-168C445B8ADF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{656FCCA5-0C58-43AC-BFA4-168C445B8ADF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{656FCCA5-0C58-43AC-BFA4-168C445B8ADF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{656FCCA5-0C58-43AC-BFA4-168C445B8ADF}.Debug|x86.Build.0 = Debug|Any CPU
+		{656FCCA5-0C58-43AC-BFA4-168C445B8ADF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{656FCCA5-0C58-43AC-BFA4-168C445B8ADF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{656FCCA5-0C58-43AC-BFA4-168C445B8ADF}.Release|x86.ActiveCfg = Release|Any CPU
+		{656FCCA5-0C58-43AC-BFA4-168C445B8ADF}.Release|x86.Build.0 = Release|Any CPU
+		{D5D5DA4F-5644-485C-A529-B245ED20A542}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5D5DA4F-5644-485C-A529-B245ED20A542}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5D5DA4F-5644-485C-A529-B245ED20A542}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D5D5DA4F-5644-485C-A529-B245ED20A542}.Debug|x86.Build.0 = Debug|Any CPU
+		{D5D5DA4F-5644-485C-A529-B245ED20A542}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5D5DA4F-5644-485C-A529-B245ED20A542}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5D5DA4F-5644-485C-A529-B245ED20A542}.Release|x86.ActiveCfg = Release|Any CPU
+		{D5D5DA4F-5644-485C-A529-B245ED20A542}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4A1D2DFA-D091-4CD2-B9CB-D7AAA795ABD9} = {92F40AFA-8416-40BE-9893-D35E1924C69D}
+		{FBFB499A-7022-4417-881B-68F63DBDB7F4} = {E011B243-0389-468B-B903-83445BED69A4}
+		{656FCCA5-0C58-43AC-BFA4-168C445B8ADF} = {4A1D2DFA-D091-4CD2-B9CB-D7AAA795ABD9}
+		{88AD0A79-5286-4C1C-8A58-AAC9E6870CCD} = {92F40AFA-8416-40BE-9893-D35E1924C69D}
+		{D5D5DA4F-5644-485C-A529-B245ED20A542} = {88AD0A79-5286-4C1C-8A58-AAC9E6870CCD}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B83BA2BA-19E5-41FB-A92A-16A03DA229E4}
+	EndGlobalSection
+EndGlobal

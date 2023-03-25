@@ -7,7 +7,7 @@ namespace TestReturnDetailDto.Controllers
     [Route("[controller]")]
     public class TestController : ControllerBase
     {
-        [HttpGet(Name = "GetWeatherForecast")]
+        [HttpGet(Name = "GetDetails")]
         public IEnumerable<PersonBase> Get()
         {
             return new List<PersonBase>()

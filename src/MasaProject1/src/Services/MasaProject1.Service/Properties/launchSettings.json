@@ -1,0 +1,30 @@
+﻿{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:46251",
+      "sslPort": 46328
+    }
+  },
+  "profiles": {
+    "MasaProject1.Services": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "applicationUrl": "https://localhost:6482;http://localhost:6142",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
