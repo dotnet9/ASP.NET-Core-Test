@@ -85,3 +85,6 @@ src/MasaProject1/src/Contracts/MasaProject1.Contracts.Order/bin/
 src/MasaProject1/src/Contracts/MasaProject1.Contracts.Order/obj/
 src/MasaProject1/src/Services/MasaProject1.Service/obj/
 src/MasaProject1/src/Services/MasaProject1.Service/bin/
+src/TaskTest/.vs/
+src/TaskTest/obj/
+src/TaskTest/bin/
