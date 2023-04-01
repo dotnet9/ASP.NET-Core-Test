@@ -7,9 +7,35 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="Masa.BuildingBlocks.Data.MappingExtensions" Version="1.0.0-preview.26" />
+    <PackageReference Include="Masa.BuildingBlocks.Dispatcher.Events" Version="1.0.0-preview.26" />
+    <PackageReference Include="Masa.BuildingBlocks.ReadWriteSplitting.Cqrs" Version="1.0.0-preview.26" />
+    <PackageReference Include="Masa.Contrib.Data.Contracts" Version="1.0.0-preview.26" />
+    <PackageReference Include="Masa.Contrib.Data.EFCore.Sqlite" Version="1.0.0-preview.26" />
+    <PackageReference Include="Masa.Contrib.Data.Mapping.Mapster" Version="1.0.0-preview.26" />
+    <PackageReference Include="Masa.Contrib.Data.UoW.EFCore" Version="1.0.0-preview.26" />
+    <PackageReference Include="Masa.Contrib.Ddd.Domain" Version="1.0.0-preview.26" />
+    <PackageReference Include="Masa.Contrib.Ddd.Domain.Repository.EFCore" Version="1.0.0-preview.26" />
+    <PackageReference Include="Masa.Contrib.Dispatcher.Events" Version="1.0.0-preview.26" />
+    <PackageReference Include="Masa.Contrib.Dispatcher.Events.FluentValidation" Version="1.0.0-preview.26" />
+    <PackageReference Include="Masa.Contrib.Dispatcher.IntegrationEvents" Version="1.0.0-preview.26" />
+    <PackageReference Include="Masa.Contrib.Dispatcher.IntegrationEvents.Dapr" Version="1.0.0-preview.26" />
+    <PackageReference Include="Masa.Contrib.Dispatcher.IntegrationEvents.EventLogs.EFCore" Version="1.0.0-preview.26" />
     <PackageReference Include="Masa.Contrib.Service.MinimalAPIs" Version="1.0.0-preview.25" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.0-preview.2.23153.2" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Contracts\Dotnet9.EShop.Contracts.Catalog\Dotnet9.EShop.Contracts.Catalog.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Application\Catalogs\Commands\" />
+    <Folder Include="Application\Catalogs\Queries\" />
+    <Folder Include="Domain\Repositories\" />
+    <Folder Include="Infrastructure\EntityConfigurations\" />
   </ItemGroup>
 
 </Project>

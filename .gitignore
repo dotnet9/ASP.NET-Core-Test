@@ -91,3 +91,5 @@ src/TaskTest/bin/
 src/Dotnet9.EShop.Demo/.vs/
 src/Dotnet9.EShop.Demo/src/Services/Dotnet9.EShop.Service.Catalog/bin/
 src/Dotnet9.EShop.Demo/src/Services/Dotnet9.EShop.Service.Catalog/obj/
+src/Dotnet9.EShop.Demo/src/Contracts/Dotnet9.EShop.Contracts.Catalog/bin/
+src/Dotnet9.EShop.Demo/src/Contracts/Dotnet9.EShop.Contracts.Catalog/obj/
