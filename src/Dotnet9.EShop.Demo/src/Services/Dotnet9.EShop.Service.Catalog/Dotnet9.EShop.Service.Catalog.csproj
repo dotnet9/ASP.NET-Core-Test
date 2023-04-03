@@ -32,7 +32,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Application\Catalogs\Commands\" />
     <Folder Include="Application\Catalogs\Queries\" />
     <Folder Include="Domain\Repositories\" />
     <Folder Include="Infrastructure\EntityConfigurations\" />
