@@ -1,13 +1,3 @@
-using System.Reflection;
-using Dotnet9.EShop.Service.Catalog.Infrastructure;
-using Dotnet9.EShop.Service.Catalog.Infrastructure.Middleware;
-using FluentValidation;
-using Masa.BuildingBlocks.Caching;
-using Masa.BuildingBlocks.Data.UoW;
-using Masa.BuildingBlocks.Dispatcher.Events;
-using Masa.BuildingBlocks.Dispatcher.IntegrationEvents;
-using Microsoft.EntityFrameworkCore;
-
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services

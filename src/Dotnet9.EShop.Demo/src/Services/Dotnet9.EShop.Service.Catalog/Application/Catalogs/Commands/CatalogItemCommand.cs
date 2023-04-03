@@ -1,6 +1,4 @@
-﻿using Masa.BuildingBlocks.ReadWriteSplitting.Cqrs.Commands;
-
-namespace Dotnet9.EShop.Service.Catalog.Application.Catalogs.Commands;
+﻿namespace Dotnet9.EShop.Service.Catalog.Application.Catalogs.Commands;
 
 public record CatalogItemCommand : Command
 {

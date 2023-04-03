@@ -1,7 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
-
-namespace Dotnet9.EShop.Service.Catalog.Infrastructure.EntityConfigurations;
+﻿namespace Dotnet9.EShop.Service.Catalog.Infrastructure.EntityConfigurations;
 
 public class CatalogItemEntityTypeConfiguration : IEntityTypeConfiguration<CatalogItem>
 {

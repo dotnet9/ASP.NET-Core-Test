@@ -1,7 +1,4 @@
-﻿using Dotnet9.EShop.Service.Catalog.Application.Catalogs.Commands;
-using FluentValidation;
-
-namespace Dotnet9.EShop.Service.Catalog.Application.Catalogs.Queries;
+﻿namespace Dotnet9.EShop.Service.Catalog.Application.Catalogs.Queries;
 
 public class CatalogItemCommandValidator:AbstractValidator<CatalogItemCommand>
 {

@@ -1,10 +1,4 @@
-﻿using Dotnet9.EShop.Service.Catalog.Domain.Repositories;
-using Masa.BuildingBlocks.Caching;
-using Masa.BuildingBlocks.Data.UoW;
-using Masa.Contrib.Ddd.Domain.Repository.EFCore;
-using Microsoft.EntityFrameworkCore;
-
-namespace Dotnet9.EShop.Service.Catalog.Infrastructure.Repositories;
+﻿namespace Dotnet9.EShop.Service.Catalog.Infrastructure.Repositories;
 
 public class CatalogItemRepository : Repository<CatalogDbContext, CatalogItem, Guid>, ICatalogItemRepository
 {

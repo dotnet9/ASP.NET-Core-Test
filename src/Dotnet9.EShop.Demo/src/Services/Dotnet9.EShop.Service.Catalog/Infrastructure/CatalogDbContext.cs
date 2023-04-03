@@ -1,6 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-
-namespace Dotnet9.EShop.Service.Catalog.Infrastructure;
+﻿namespace Dotnet9.EShop.Service.Catalog.Infrastructure;
 
 public class CatalogDbContext : MasaDbContext<CatalogDbContext>
 {

@@ -1,13 +1,4 @@
-﻿using System.Linq.Expressions;
-using Dotnet9.EShop.Contracts.Catalog.Dto;
-using Dotnet9.EShop.Service.Catalog.Application.Catalogs.Commands;
-using Dotnet9.EShop.Service.Catalog.Application.Catalogs.Queries;
-using Dotnet9.EShop.Service.Catalog.Domain.Repositories;
-using Masa.BuildingBlocks.Data;
-using Masa.Contrib.Dispatcher.Events;
-using Masa.Utils.Models;
-
-namespace Dotnet9.EShop.Service.Catalog.Application.Catalogs
+﻿namespace Dotnet9.EShop.Service.Catalog.Application.Catalogs
 {
     public class CatalogItemHandler
     {

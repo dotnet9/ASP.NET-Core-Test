@@ -1,6 +1,4 @@
-﻿using Masa.BuildingBlocks.Dispatcher.Events;
-
-namespace Dotnet9.EShop.Service.Catalog.Infrastructure.Middleware;
+﻿namespace Dotnet9.EShop.Service.Catalog.Infrastructure.Middleware;
 
 public class LoggingEventMiddleware<TEvent> : EventMiddleware<TEvent> where TEvent : IEvent
 {
