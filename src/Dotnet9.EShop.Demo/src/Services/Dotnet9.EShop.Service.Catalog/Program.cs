@@ -2,6 +2,7 @@ using System.Reflection;
 using Dotnet9.EShop.Service.Catalog.Infrastructure;
 using Dotnet9.EShop.Service.Catalog.Infrastructure.Middleware;
 using FluentValidation;
+using Masa.BuildingBlocks.Caching;
 using Masa.BuildingBlocks.Data.UoW;
 using Masa.BuildingBlocks.Dispatcher.Events;
 using Masa.BuildingBlocks.Dispatcher.IntegrationEvents;
@@ -9,10 +10,16 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddMapster().AddMasaDbContext<CatalogDbContext>(dbContextBuilder =>
+builder.Services
+    .AddMapster()
+    .AddSequentialGuidGenerator()
+    .AddMasaDbContext<CatalogDbContext>(dbContextBuilder =>
     {
-        dbContextBuilder.UseSqlite().UseFilter();
+        dbContextBuilder
+            .UseSqlite()
+            .UseFilter();
     })
+    .AddMultilevelCache(distributedCacheOptions => { distributedCacheOptions.UseStackExchangeRedisCache(); })
     .AddValidatorsFromAssembly(Assembly.GetExecutingAssembly()) // 添加指定程序集下的`FluentValidation`验证器
     .AddDomainEventBus(options =>
     {
@@ -29,6 +36,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.AddServices();
+app.UseMasaExceptionHandler();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
